@@ -6,7 +6,7 @@
 }
 
 *:focus {
-  outline: 3px dashed #228bec;
+  /* outline: 3px dashed #228bec; */
   outline-offset: 0;
 }
 
