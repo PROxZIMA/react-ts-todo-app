@@ -1,19 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
-import logo from './logo.svg';
-// import ButtonCounter from './components/ButtonCounter';
-import Clock from './components/Clock';
-import './App.css';
-import { Task, AppProps, FilterMap } from './types/types';
 import { nanoid } from 'nanoid';
+import GithubCorner from 'react-github-corner';
+import { AppProps, FilterMap } from './types/types';
 import Form from './components/Form';
 import FilterButton from './components/FilterButton';
-import TaskItem from './components/Task';
+import TaskItem from './components/TaskItem';
+// import ButtonCounter from './components/ButtonCounter';
+import Clock from './components/Clock';
 
 
 const FILTER_MAP: FilterMap = {
   "All": () => true,
-  "Active": (task: Task) => !task.isCompleted,
-  "Completed": (task: Task) => task.isCompleted
+  "Active": task => !task.isCompleted,
+  "Completed": task => task.isCompleted
 };
 
 
@@ -82,7 +81,7 @@ function App(props: AppProps) {
     ));
 
   useEffect(() => {
-    if (Math.abs(oldTaskLength.current - tasks.length) == 1) {
+    if (Math.abs(oldTaskLength.current - tasks.length) === 1) {
       listHeader.current?.focus();
     }
     oldTaskLength.current = tasks.length;
@@ -91,6 +90,7 @@ function App(props: AppProps) {
   return (
     <>
       <Clock />
+      <GithubCorner href="https://github.com/PROxZIMA/react-ts-todo-app" />
       <div className="todoapp stack-large">
         <Form addTask={handleAddTask} />
 

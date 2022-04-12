@@ -25,7 +25,7 @@ const TaskItem = (props: TaskItemProps) => {
     if (newName.trim() === '') {
       return;
     }
-    props.onEdit(id, newName);
+    onEdit(id, newName);
     setNewName('');
     setEdit(false);
   }
