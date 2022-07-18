@@ -3,7 +3,7 @@
 Sample todo app built with the React/ReactDOM framework. This code is `Typescript` version of
 [Understanding client-side JavaScript frameworks: React tutorials](https://wiki.developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks#React_tutorials) by [MDN](https://developer.mozilla.org).
 
-For the live version, see [`https://proxzima.ml/react-ts-todo-app/`](https://proxzima.ml/react-ts-todo-app/).
+For the live version, see [`https://proxzima.dev/react-ts-todo-app/`](https://proxzima.dev/react-ts-todo-app/).
 
 - Use [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/setup)
 
